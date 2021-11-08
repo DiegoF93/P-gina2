@@ -1,0 +1,778 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #0d74b9;;
+    text-decoration: none;
+    font-family: Merriweather, 'Cooper Black';
+}
+
+body{
+    justify-content: center;
+    background-color: #010615;
+}
+
+header{
+    background-color: #252525;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+header .container .logo{
+    width: 200px;
+    margin: 10px 0;
+}
+
+header .container a{
+    margin: 0 15px;
+    font-size: 17px;
+}
+
+header .container .hamb{
+    display: none;
+}
+
+#Presentación{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+#Presentación .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background: #060c21;
+    transition: 0.5s;
+}
+
+#Presentación .box:hover{
+    height: 400px;
+}
+
+#Presentación .box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Presentación .box .imgBx img{
+    max-width: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+#Presentación .box:hover .imgBx img{
+    opacity: 1;
+}
+
+#Presentación .box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #0d74b9;
+    z-index: -1;
+}
+
+#Presentación .box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #0d74b9;
+    z-index: -2;
+    filter: blur(40px); 
+}
+
+#Presentación .box .content{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+#Presentación .box:hover .content{
+    opacity: 1;
+}
+
+#Presentación .box .content h2{
+    font-size: 25px;
+    color: #0d74b9;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+#Presentación .box .content h2 span{
+    font-size: 14px;
+    color: #0d74b9;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+#Presentación a{
+    position: relative;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #010615;
+    margin: 40px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+#Presentación a:hover{
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 60px var(--clr),
+    0 0 100px var(--clr);
+    color: #010615;
+}
+
+#Presentación a::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400px;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 4s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+#Presentación a:hover::before{
+    width: 100%;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#Presentación a::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #010615;
+    transition: 0.5s;
+}
+
+#Presentación a:hover::after{
+    background: var(--clr);
+}
+
+#Presentación a span{
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+#Info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+#Info .containerI{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    flex-wrap: wrap;
+}
+
+#Info .containerI .card
+{
+    position: relative;
+    width: 280px;
+    padding: 20px;
+    margin: 10px;
+    background: #3f3f3f;
+}
+#Info .containerI .card::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #0d74b9;
+    border-right: 20px solid #0d74b9;
+}
+#Info .containerI .card .icono
+{
+    margin-bottom: 10px;
+}
+#Info .containerI .card .icono img
+{
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#Info .containerI .card .content
+{
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+#Info .containerI .card.active .content
+{
+    height: auto;
+}
+#Info .containerI .card .content::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent,#3f3f3f);
+}
+#Info .containerI .card.active .content::before
+{
+    display: none;
+}
+#Info .containerI .card .content h3
+{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+#Info .containerI .card .content ul li
+{
+    font-size: 1em;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 1px;
+}
+#Info .containerI .more
+{
+    position: relative;
+    padding: 10px 15px;
+    background: #0d74b9;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+#Info .containerI .card .more::before
+{
+    content: 'Ver más';
+}
+#Info .containerI .card.active .more::before
+{
+    content: 'Ver menos';
+}
+#Proyectos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#Proyectos .card
+{
+    position: relative;
+    width: 550px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#0d74b9,#d41e31);
+}
+#Proyectos .card img
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    height: 250px;
+    transition: 0.5s;
+}
+#Proyectos .card:hover img
+{
+    left: 90%;
+    height: 350px;
+}
+#Proyectos .card .content
+{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px;
+    padding-left: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+#Proyectos .card:hover .content
+{
+    left: 0%;
+    visibility: visible;
+    opacity: 1;
+}
+#Proyectos .card .content h2
+{
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1em;
+    padding-bottom: 5px;
+}
+#Proyectos .card .content p
+{
+    color: #fff;
+}
+#Proyectos .card .content a
+{
+    position: relative;
+    display: inline-block;
+    color: #0d74b9;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+#Sugerencias
+{
+    width: 100%;
+    height: 100vh;
+}
+#Sugerencias .containerS
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+#Sugerencias .containerS:after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5%;
+    width: 100%;
+    height: 90%;
+    background: url("img/foto.jpg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(15px);
+}
+#Sugerencias .containerS .contentBx
+{
+   max-width: 850px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+#Sugerencias .containerS .contentBx .left
+{
+    height: 100%;
+    background: url("img/foto.jpg") no-repeat center;
+    background-size: cover;
+}
+#Sugerencias .containerS .contentBx .right
+{
+    padding: 25px 30px; 
+}
+#Sugerencias .containerS .contentBx h2
+{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#Sugerencias .field
+{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+#Sugerencias .field:hover
+{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#Sugerencias .field:focus
+{
+    background-color: #fff;
+    border: 2px solid rgba(30, 85, 250, 0.47);
+}
+#Sugerencias .area
+{
+    min-height: 150px;
+}
+#Sugerencias .enviar
+{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #0d74b9;
+    opacity: 0.8;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+#Sugerencias .enviar:hover
+{
+    background-color: #0d74b9;
+    opacity: 1;
+}
+/*
+#Sugerencias
+{
+    overflow-x: hidden;
+}
+
+#Sugerencias section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    width: 100%;
+}
+
+#Sugerencias .containerS{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+
+#Sugerencias .containerS h2{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#Sugerencias .containerS .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+#Sugerencias .containerS .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox input,
+#Sugerencias .containerS .row100 .col .inputBox textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox input:focus + .text,
+#Sugerencias .containerS .row100 .col .inputBox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox input:focus ~ .line,
+#Sugerencias .containerS .row100 .col .inputBox input:valid ~ .line{
+    height: 100%;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+#Sugerencias .containerS .row100 .col .inputBox textarea:focus ~ .line,
+#Sugerencias .containerS .row100 .col .inputBox textarea:valid ~ .line{
+    height: 100%;
+}
+
+#Sugerencias .containerS .row100 .col input[type="submit"]{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: #0d74b9;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+*/
+footer{
+    position: relative;
+}
+
+footer .containerF{
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .containerF .columna{
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .barra-footer{
+    background-color: #000;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer .containerF .columna h3
+{
+    font-size: 22px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+footer ul{
+    list-style: none;
+}
+
+footer li{
+    display: inline;
+    font-size: 18px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+footer li i{
+    margin: 5px 10px;
+    font-size: 23px;
+}
+
+footer li i:hover{
+    cursor: pointer;
+    font-size: 27px;
+}
+
+@media(max-width: 768px)
+{
+    header .container
+    {
+    padding: 0;
+    }
+    header .container nav
+    {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        padding: 80px 0;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4s ease;
+        transform: translateX(100%);
+    }
+    header .container nav.open
+    {
+        transform: translateX(30%);
+    }
+    header .container nav a
+    {
+        font-size: 30px;
+        margin: 15px 15px;
+    }
+    header .container .hamb
+    {
+        display: block;
+        font-size: 30px;
+        position: relative;
+    }
+    #Presentación .box{
+        height: 400px;
+        margin: 20px 40px;
+        margin-top: 80px;
+    }
+    #Presentación .box .content{
+        opacity: 1;
+    }
+    #Presentación .box .imgBx img{
+        opacity: 1;
+    }
+    #Presentación a
+    {
+        margin: 20px 40px;
+    }
+    #Proyectos .card
+    {
+        position: relative;
+        width: auto;
+        max-width: 600px;
+        transition: 0.5s;
+        height: 475px;
+        align-items: baseline;
+        margin: 20px 30px;
+    }
+    #Proyectos .card img
+    {
+        bottom: 0;
+        left: 50%;
+        height: 225px;
+    }
+    #Proyectos .card:hover img
+    {
+        left: 50%;
+        height: 225px;
+    }
+    #Proyectos .card .content
+    {
+        width: 100%;
+        top: 1%;
+        visibility: visible;
+        opacity: 1;
+        left: 0%;
+    }
+    #Sugerencias .containerS
+    {
+        padding: 20px;
+    }
+    #Sugerencias .containerS .contentBx
+    {
+        grid-template-columns: 1fr;
+    }
+    /*
+    #Sugerencias .containerS
+    {
+        padding: 10px;
+    }
+    #Sugerencias .containerS h2
+    {
+        font-size: 30px;
+    }*/
+    footer .containerF
+    {
+        flex-direction: column;
+        height: 60vh;
+    }
+}
